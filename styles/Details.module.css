@@ -1,0 +1,117 @@
+#container {
+	height:100%;
+	width: 100%;
+	background-image: url('./../public/tounge.webp');
+	background-repeat: no-repeat;
+	background-position: 50% 72px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	
+}
+.containerEnter {
+	background-size: 700px;
+	animation:  growBackgroundImage .5s;
+}
+.containerLeave {
+	background-size: 400px;
+	animation:  growBackgroundImageLeave .2s;
+}
+#tourInfo {
+	color: black;
+	font-size: 42px;
+	margin: 64px;
+	text-align: right;
+	font-weight: 700;
+}
+
+#tourList {
+	color:black;
+	font-size: 18px;
+	list-style: none;
+	font-weight: normal;
+	animation:  bounceUp .5s ;
+}
+#tourInfoSubHeader {
+	animation:  bounceDown .5s ;
+	opacity: 1;
+
+}
+#backBtn {
+	position: absolute;
+	top:0;
+	left:0;
+	margin: 16px;
+	border:none;
+	background: none;
+	border-radius: 32px;
+	height: 32px;
+	width: 32px;
+	font-size:42px;
+	font-weight: 300;
+	color: black;
+	cursor: pointer;
+}
+
+.tourInfoLeave {
+	opacity: 0;
+	animation:  tourInfoFadeOut .5s ;
+}
+
+@keyframes tourInfoFadeOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes growBackgroundImage {
+  0% {
+    background-size: 400px;
+  }
+  50% {
+    background-size: 700px;
+  }
+}
+
+@keyframes tourList {
+  0% {
+    color: white;
+  }
+  100% {
+	color:black;
+  }
+}
+
+@keyframes bounceDown {
+  0% {
+    margin-bottom:164px;
+	opacity: 0;
+  }
+  100% {
+	opacity: 100;
+  }
+}
+
+
+@keyframes bounceUp{
+  0% {
+    margin-bottom:-32px;
+	opacity: 0;
+  }
+  100% {
+	opacity: 100;
+  }
+}
+
+
+@keyframes growBackgroundImageLeave {
+  0% {
+    background-size: 700px;
+  }
+  100% {
+    background-size: 400px;
+  }
+}
